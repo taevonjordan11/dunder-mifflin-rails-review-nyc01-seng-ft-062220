@@ -1,0 +1,17 @@
+<h1><%= "#{@employee.first_name} #{@employee.last_name}" %></h1>
+
+<ul>
+  <h2>Attributes:</h2>
+  <p>Alias:
+    <%= @employee.alias %>
+    <p>Title:
+      <%= @employee.title %></p>
+    <p>Office:
+      <%= @employee.office %></p>
+    <p>My Dog:
+      <%= @employee.dog.name%></p>
+    <p><img src="<%= @employee.img_url %>" alt="<%= @employee.first_name%>">
+    </p>
+  </ul>
+
+  <%= button_to "DELETE", employee_path(@employee), method: :delete %>
